@@ -22,7 +22,7 @@
 		<slf4j-version>1.6.6</slf4j-version>
 		<log4j-version>1.2.15</log4j-version>
 		<javax-version>1</javax-version>
-		<servlet-api-version>2.5</servlet-api-version>
+		<servlet-api-version>4.0.1</servlet-api-version>
 		<jsp-api-version>2.1</jsp-api-version>
 		<jstl-version>1.2</jstl-version>
 		<junit-version>4.7</junit-version>
@@ -34,8 +34,9 @@
 		<taglibs-standard-impl-version>1.2.5</taglibs-standard-impl-version>
 		<javax.mail-version>1.6.2</javax.mail-version>
 		<commons-io-version>2.6</commons-io-version>
-		<commons-fileupload-version>1.4</commons-fileupload-version>
 		<lombok-version>1.18.16</lombok-version>
+		<commons-fileupload-version>1.4</commons-fileupload-version>
+		<jackson-version>2.11.2</jackson-version>
 	</properties>
 	
 	<dependencies>
@@ -123,7 +124,7 @@
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
+			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet-api-version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -223,6 +224,19 @@
 		    <artifactId>lombok</artifactId>
 		    <version>${lombok-version}</version>
 		    <scope>provided</scope>
+		</dependency>
+
+		<!-- Jackson -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>${jackson-version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${jackson-version}</version>
 		</dependency>
 	</dependencies>
 	
