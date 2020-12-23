@@ -1,6 +1,5 @@
 package com.example.demo;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -52,13 +51,3 @@ public class HomeController {
         return String.format("%s/%s/%s", dir, sub, page);
     }
 }
-
-
-
-
-
-
-
-
-
-
