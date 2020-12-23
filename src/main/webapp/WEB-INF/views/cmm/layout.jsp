@@ -15,7 +15,7 @@
 			<tiles:insertAttribute name="gnb" />
 		</article>
 		<article id="layout-container">
-			
+			<tiles:insertAttribute name="container" />
 		</article>
 	</section>
 	<footer id="layout-footer">
