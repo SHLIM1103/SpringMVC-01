@@ -1,12 +1,9 @@
-/**
- * 
- */
+'use strict'
 const teaNum = localStorage.getItem(`searchTeacher`)
 $.getJSON(`/teachers/${teaNum}`, d => {
 	$(`#profileImage`).html(`<img src="${d.profileImage}" alt="${d.name}" class="img-fluid rounded-circle mb-2" width="128" height="128" />
 							<h5 class="card-title mb-0">${d.name}</h5>
 							<div class="text-muted mb-2">교사</div>
-
 							<div>
 								<a id="info-update" class="btn btn-primary btn-sm" href="#">정보수정</a>
 								<a id="info-delete" class="btn btn-danger btn-sm" href="#"><span data-feather="message-square"></span> 정보삭제</a>
@@ -18,7 +15,6 @@ $.getJSON(`/teachers/${teaNum}`, d => {
 	$(`#about`).html(`<h5 class="h6 card-title">About</h5>
 							<ul class="list-unstyled mb-0">
 								<li class="mb-1"><span data-feather="home" class="feather-sm mr-1"></span> 교강사번호 : <a href="#">${d.teaNum}</a></li>
-
 								<li id="updateEmail"  class="mb-1"><span data-feather="briefcase" class="feather-sm mr-1"></span> 이메일 : <a href="#">${d.email}</a></li>
 								<li id="updateAddr" class="mb-1"><span data-feather="map-pin" class="feather-sm mr-1"></span> 주소 : <a href="#">서울</a></li>
 							</ul>`)
@@ -75,4 +71,4 @@ $.getJSON(`/teachers/${teaNum}`, d => {
 			}
 		})
 	})						 
-}) 
+})

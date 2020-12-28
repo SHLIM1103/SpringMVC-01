@@ -2,25 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
-	<meta name="author" content="AdminKit">
-	<meta name="keywords" content="adminkit, bootstrap, web ui kit, dashboard template, admin template">
-
-	<link rel="shortcut icon" href="${mgr}/img/icons/icon-48x48.png" />
-
-	<title>Profile | AdminKit Demo</title>
-
-	<link href="${mgr}/css/app.css" rel="stylesheet">
-</head>
-
-<body>
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar">
 			<div class="sidebar-content js-simplebar">
@@ -232,7 +214,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="${mgr}/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Vanessa Tucker</div>
@@ -317,7 +299,7 @@
 									<h5 class="card-title mb-0">상세 프로필</h5>
 								</div>
 								<div class="card-body text-center" id="profileImage">
-									<img src="${mgr}/img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+									<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
 									<h5 class="card-title mb-0">Christina Mason</h5>
 									<div class="text-muted mb-2">Lead Developer</div>
 
@@ -440,7 +422,7 @@
 
 											<div class="media mt-1">
 												<a class="pr-3" href="#">
-                <img src="${mgr}/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
+                <img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
               </a>
 												<div class="media-body">
 													<div class="border text-sm text-muted p-2 mt-1">
@@ -511,10 +493,4 @@
 		</div>
 	</div>
 
-	<script src="${mgr}/js/vendor.js"></script>
-	<script src="${mgr}/js/app.js"></script>
-	<script src="${mgr}/js/teacher.js"></script>
 
-</body>
-
-</html>

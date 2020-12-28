@@ -3,24 +3,26 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <section id="home-slider">
-    <div class="container">
-    	<div class="main-slider">
-			<div class="slide-text">
-    			<h1>We Are Creative Nerds</h1>
-   				<p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-   				<a href="#" class="btn btn-common">SIGN UP</a>
-			</div>
-			<img src="${cmm}/images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
-			<img src="${cmm}/images/home/slider/slide1/circle1.png" class="slider-circle1" alt="slider image">
-			<img src="${cmm}/images/home/slider/slide1/circle2.png" class="slider-circle2" alt="slider image">
-			<img src="${cmm}/images/home/slider/slide1/cloud1.png" class="slider-cloud1" alt="slider image">
-			<img src="${cmm}/images/home/slider/slide1/cloud2.png" class="slider-cloud2" alt="slider image">
-			<img src="${cmm}/images/home/slider/slide1/cloud3.png" class="slider-cloud3" alt="slider image">
-			<img src="${cmm}/images/home/slider/slide1/sun.png" class="slider-sun" alt="slider image">
-			<img src="${cmm}/images/home/cycle.png" class="slider-cycle" alt="">
+	<div class="container">
+		<div class="main-slider">
+		    <div class="slide-text">
+		        <h1 id="title">We Are Creative Nerds</h1>
+		        <p id="<messa></messa>ge">Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
+		        <a id="student_register" href="#" class="btn btn-common">학생 등록</a>
+		        <a id="student_login" href="#" class="btn btn-common">학생 로그인</a>
+		    </div>
+		    <img src="${cmm}/images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
+		    <img src="${cmm}/images/home/slider/slide1/circle1.png" class="slider-circle1" alt="slider image">
+		    <img src="${cmm}/images/home/slider/slide1/circle2.png" class="slider-circle2" alt="slider image">
+		    <img src="${cmm}/images/home/slider/slide1/cloud1.png" class="slider-cloud1" alt="slider image">
+		    <img src="${cmm}/images/home/slider/slide1/cloud2.png" class="slider-cloud2" alt="slider image">
+		    <img src="${cmm}/images/home/slider/slide1/cloud3.png" class="slider-cloud3" alt="slider image">
+		    <img src="${cmm}/images/home/slider/slide1/sun.png" class="slider-sun" alt="slider image">
+		    <img src="${cmm}/images/home/cycle.png" class="slider-cycle" alt="">
 		</div>
 	</div>
-    <div class="preloader">
-    	<i class="fa fa-sun-o fa-spin"></i>
-    </div>
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
 </section>
+<script>
+	mainSlider.init()
+</script>

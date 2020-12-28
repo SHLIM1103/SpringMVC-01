@@ -1,6 +1,4 @@
-/**
- * 
- */
+'use strict'
 $('#students').click( e => {
 	$.getJSON(`/students`, d => {
 		let tr = ``

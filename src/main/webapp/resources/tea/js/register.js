@@ -1,3 +1,4 @@
+'use strict'
 $('#home').click(e => { location.href = '/'})
 $('#facebook').click(e => {location.href = '/transfer/sym/tea/index'})
 $('#signupbtn').click(e => {

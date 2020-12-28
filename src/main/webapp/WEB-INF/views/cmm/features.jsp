@@ -32,6 +32,6 @@
                     <P>Ut officia cupidatat anim excepteur fugiat cillum ea occaecat rump pork chop tempor. Ut tenderloin veniam commodo. Shankle aliquip short ribs, chicken eiusmod exercitation shank landjaeger spare ribs corned beef.</P>
                 </div>
             </div>
-        </div>S
+        </div>
     </div>
 </section>

@@ -2,25 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
-	<meta name="author" content="AdminKit">
-	<meta name="keywords" content="adminkit, bootstrap, web ui kit, dashboard template, admin template">
-
-	<link rel="shortcut icon" href="${mgr}/img/icons/icon-48x48.png" />
-
-	<title>Profile | AdminKit Demo</title>
-
-	<link href="${mgr}/css/app.css" rel="stylesheet">
-</head>
-
-<body>
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar">
 			<div class="sidebar-content js-simplebar">
@@ -232,7 +214,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="${mgr}/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Vanessa Tucker</div>
@@ -244,7 +226,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="${mgr}/img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">William Harris</div>
@@ -256,7 +238,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2" >
-												<img src="${mgr}/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Christina Mason</div>
@@ -268,7 +250,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="${mgr}/img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Sharon Lessman</div>
@@ -419,7 +401,7 @@
 
 											<div class="row no-gutters mt-1">
 												<div class="col-6 col-md-4 col-lg-4 col-xl-3">
-													<img src="${mgr}/img/photos/unsplash-1.jpg" class="img-fluid pr-2" alt="Unsplash">
+													<img src="<%=application.getContextPath()%>/assets/mgr/img/photos/unsplash-1.jpg" class="img-fluid pr-2" alt="Unsplash">
 												</div>
 												<div class="col-6 col-md-4 col-lg-4 col-xl-3">
 													<img src="${mgr}/img/photos/unsplash-2.jpg" class="img-fluid pr-2" alt="Unsplash">
@@ -440,7 +422,7 @@
 
 											<div class="media mt-1">
 												<a class="pr-3" href="#">
-                <img src="${mgr}/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
+                <img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
               </a>
 												<div class="media-body">
 													<div class="border text-sm text-muted p-2 mt-1">
@@ -511,10 +493,5 @@
 		</div>
 	</div>
 
-	<script src="${mgr}/js/vendor.js"></script>
-	<script src="${mgr}/js/app.js"></script>
-	<script src="${mgr}/js/student.js"></script>
 
-</body>
 
-</html>

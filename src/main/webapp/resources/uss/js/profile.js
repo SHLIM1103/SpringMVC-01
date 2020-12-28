@@ -1,3 +1,4 @@
+'use strict'
 const userid = sessionStorage.getItem('userid')
 $.getJSON(`/students/${userid}`, d => {
 	$('#profileImage').html(`<img src="${d.profileImage}" alt="${d.name}" class="img-fluid rounded-circle mb-2" width="128" height="128" />
@@ -13,7 +14,6 @@ $.getJSON(`/students/${userid}`, d => {
 	$(`#about`).html(`<h5 class="h6 card-title">About</h5>
 							<ul class="list-unstyled mb-0">
 								<li class="mb-1"><span data-feather="home" class="feather-sm mr-1"></span> 학생번호 : <a href="#">${d.stuNum}</a></li>
-
 								<li class="mb-1"><span data-feather="briefcase" class="feather-sm mr-1"></span> 생년월일 : <a href="#">${d.ssn}</a></li>
 								<li class="mb-1"><span data-feather="map-pin" class="feather-sm mr-1"></span> 주소 : <a href="#">서울</a></li>
 							</ul>`)

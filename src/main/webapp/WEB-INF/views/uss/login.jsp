@@ -2,23 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Coming Soon | Triangle</title>
-    <link href="${cmm}/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${cmm}/css/font-awesome.min.css" rel="stylesheet"> 
-    <link href="${cmm}/css/main.css" rel="stylesheet">
-    <link href="${cmm}/css/responsive.css" rel="stylesheet">
-
-    <!--[if lt IE 9]>
-        <script src="${cmm}/js/html5shiv.js"></script>
-        <script src="${cmm}/js/respond.min.js"></script>
-    <![endif]-->       
+      
     <link rel="shortcut icon" href="${cmm}/images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${cmm}/images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${cmm}/images/ico/apple-touch-icon-114-precomposed.png">
@@ -110,13 +94,16 @@
                     <div class="time-count">
                         <form style="border:1px solid #ccc">
                             <div class="container">
+                              
                               <hr>
+                              
                               <label for="name"><b>아이디</b></label>
                               <input type="text" placeholder="아이디 등록" id="userid" required>
                              
                               <label for="password"><b>비밀번호</b></label>
                               <input type="password" value="1" id="password" required>
                             
+                          
                               <div class="clearfix">
                                 <button type="button" class="cancelbtn">Cancel</button>
                                 <button type="button" id="signin-btn" class="signupbtn">Sign In</button>
@@ -129,7 +116,7 @@
             </div>
         </div>       
     </section>
-    
+
     <section id="coming-soon-footer" class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -140,13 +127,3 @@
             </div>
         </div>       
     </section>
-    
-    <script src="${cmm}/js/jquery.js"></script>
-    <script src="${cmm}/js/bootstrap.min.js"></script>
-    <script src="${cmm}/js/wow.min.js"></script>
-    <script src="${cmm}/js/coundown-timer.js"></script>
-    <script src="${cmm}/js/main.js"></script>
-    <script src="${uss}/js/login.js"></script>
-    
-</body>
-</html>
