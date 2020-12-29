@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.example.demo.sym.service.Manager;
 import com.example.demo.sym.service.ManagerService;
-import com.example.demo.sym.service.model.Manager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
