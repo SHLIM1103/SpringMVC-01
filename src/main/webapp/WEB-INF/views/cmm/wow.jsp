@@ -7,8 +7,8 @@
 		<div class="row">
 			<div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
 				<div class="single-service">
-				    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-				        <img id="icon1" src="${cmm}/images/home/icon1.png" alt="">
+				    <div id="icon1" class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+				        <img src="${cmm}/images/home/icon1.png" alt="">
 		       		</div>
 			        <h2>Incredibly Responsive</h2>
 			        <p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
@@ -16,8 +16,8 @@
 			</div>
 			<div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
 			    <div class="single-service">
-			        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-			            <img id="icon2" src="${cmm}/images/home/icon2.png" alt="">
+			        <div id="icon2" class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+			            <img src="${cmm}/images/home/icon2.png" alt="">
 			        </div>
 			        <h2>Superior Typography</h2>
 			        <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
@@ -25,8 +25,8 @@
 			</div>
 			<div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
 			    <div class="single-service">
-			        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
-						<img id="icon3 "src="${cmm}/images/home/icon3.png" alt="">
+			        <div id="icon3" class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+						<img src="${cmm}/images/home/icon3.png" alt="">
 					</div>
 					<h2>Swift Page Builder</h2>
 					<p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
@@ -35,6 +35,3 @@
 		</div>
 	</div>
 </section>
-<script>
-	wow.init()
-</script>

@@ -19,6 +19,7 @@
 	
 	<context:component-scan base-package="com.example.demo" />
 	<mvc:annotation-driven />
+
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	
 	<context:property-placeholder location="classpath:config/application.properties"/>

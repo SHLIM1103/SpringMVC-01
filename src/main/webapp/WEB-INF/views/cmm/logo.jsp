@@ -14,5 +14,5 @@
     </a>
 </div>
 <script>
-	cmm.goHome()
+	common.goHome()
 </script>

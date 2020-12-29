@@ -1,4 +1,5 @@
 'use strict'
+
 const teaNum = localStorage.getItem(`searchTeacher`)
 $.getJSON(`/teachers/${teaNum}`, d => {
 	$(`#profileImage`).html(`<img src="${d.profileImage}" alt="${d.name}" class="img-fluid rounded-circle mb-2" width="128" height="128" />
@@ -72,3 +73,4 @@ $.getJSON(`/teachers/${teaNum}`, d => {
 		})
 	})						 
 })
+

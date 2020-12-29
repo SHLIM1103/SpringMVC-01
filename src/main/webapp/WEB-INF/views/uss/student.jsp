@@ -15,39 +15,39 @@
 					Pages
 				</li>
 
-				<li class="sidebar-item active">
+				<li class="sidebar-item">
 					<a class="sidebar-link" href="index.html">
-						<i class="align-middle" data-feather="sliders"></i>
-						<span class="align-middle">Dashboard</span>
+		              <i class="align-middle" data-feather="sliders"></i>
+		              <span class="align-middle">Dashboard</span>
 		            </a>
 				</li>
 
-				<li class="sidebar-item">
+				<li class="sidebar-item active">
 					<a class="sidebar-link" href="pages-profile.html">
-						<i class="align-middle" data-feather="user"></i>
-						<span class="align-middle">Profile</span>
+		              <i class="align-middle" data-feather="user"></i>
+		              <span class="align-middle">Profile</span>
 		            </a>
 				</li>
 
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="pages-settings.html">
-						<i class="align-middle" data-feather="settings"></i>
-						<span class="align-middle">Settings</span>
+		              <i class="align-middle" data-feather="settings"></i>
+		              <span class="align-middle">Settings</span>
 		            </a>
 				</li>
 
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="pages-invoice.html">
-						<i class="align-middle" data-feather="credit-card"></i>
-						<span class="align-middle">Invoice</span>
-           			</a>
+		              <i class="align-middle" data-feather="credit-card"></i>
+		              <span class="align-middle">Invoice</span>
+		            </a>
 				</li>
 
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="pages-blank.html">
-						<i class="align-middle" data-feather="book"></i>
-						<span class="align-middle">Blank</span>
-           			</a>
+		              <i class="align-middle" data-feather="book"></i>
+		              <span class="align-middle">Blank</span>
+		            </a>
 				</li>
 
 				<li class="sidebar-header">
@@ -55,9 +55,9 @@
 				</li>
 				<li class="sidebar-item">
 					<a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
-             				<i class="align-middle" data-feather="briefcase"></i>
-             				<span class="align-middle">UI Elements</span>
-             			</a>
+		              <i class="align-middle" data-feather="briefcase"></i>
+		              <span class="align-middle">UI Elements</span>
+		            </a>
 					<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 						<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
 						<li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
@@ -71,16 +71,16 @@
 
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="icons-feather.html">
-             				<i class="align-middle" data-feather="coffee"></i>
-             				<span class="align-middle">Icons</span>
-           			</a>
+		              <i class="align-middle" data-feather="coffee"></i>
+		              <span class="align-middle">Icons</span>
+		            </a>
 				</li>
 
 				<li class="sidebar-item">
 					<a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
-             				<i class="align-middle" data-feather="check-circle"></i>
-             				<span class="align-middle">Forms</span>
-             			</a>
+		              <i class="align-middle" data-feather="check-circle"></i> 
+		              <span class="align-middle">Forms</span>
+		            </a>
 					<ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 						<li class="sidebar-item"><a class="sidebar-link" href="forms-layouts.html">Form Layouts</a></li>
 						<li class="sidebar-item"><a class="sidebar-link" href="forms-basic-inputs.html">Basic Inputs</a></li>
@@ -89,9 +89,9 @@
 
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="tables-bootstrap.html">
-             				<i class="align-middle" data-feather="list"></i>
-             				<span class="align-middle">Tables</span>
-           			</a>
+		              <i class="align-middle" data-feather="list"></i> 
+		              <span class="align-middle">Tables</span>
+		            </a>
 				</li>
 
 				<li class="sidebar-header">
@@ -100,16 +100,16 @@
 
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="charts-chartjs.html">
-		            	<i class="align-middle" data-feather="bar-chart-2"></i>
-		            	<span class="align-middle">Charts</span>
-          				</a>
+		              <i class="align-middle" data-feather="bar-chart-2"></i> 
+		              <span class="align-middle">Charts</span>
+		            </a>
 				</li>
 
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="maps-google.html">
-             				<i class="align-middle" data-feather="map"></i>
-             				<span class="align-middle">Maps</span>
-           			</a>
+						<i class="align-middle" data-feather="map"></i> 
+						<span class="align-middle">Maps</span>
+		            </a>
 				</li>
 			</ul>
 
@@ -128,7 +128,7 @@
 	<div class="main">
 		<nav class="navbar navbar-expand navbar-light navbar-bg">
 			<a class="sidebar-toggle d-flex">
-	        	<i class="hamburger align-self-center"></i>
+				<i class="hamburger align-self-center"></i>
 	        </a>
 
 			<form class="form-inline d-none d-sm-inline-block">
@@ -136,8 +136,8 @@
 					<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
 					<div class="input-group-append">
 						<button class="btn" type="button">
-               				<i class="align-middle" data-feather="search"></i>
-             				</button>
+			                <i class="align-middle" data-feather="search"></i>
+			            </button>
 					</div>
 				</div>
 			</form>
@@ -248,7 +248,7 @@
 								</a>
 								<a href="#" class="list-group-item">
 									<div class="row no-gutters align-items-center">
-										<div class="col-2">
+										<div class="col-2" >
 											<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
 										</div>
 										<div class="col-10 pl-2">
@@ -278,12 +278,12 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-toggle="dropdown">
-               				<i class="align-middle" data-feather="settings"></i>
-             				</a>
+			                <i class="align-middle" data-feather="settings"></i>
+			         	</a>
 
 						<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-               				<img src="${mgr}/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
-             				</a>
+			                <img src="${mgr}/img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+			            </a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1" data-feather="user"></i> Profile</a>
 							<a class="dropdown-item" href="#"><i class="align-middle mr-1" data-feather="pie-chart"></i> Analytics</a>
@@ -301,239 +301,169 @@
 		<main class="content">
 			<div class="container-fluid p-0">
 
-				<div class="row mb-2 mb-xl-3">
-					<div class="col-auto d-none d-sm-block">
-						<h3><strong>Analytics</strong> Dashboard</h3>
-					</div>
-
-					<div class="col-auto ml-auto text-right mt-n1">
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
-								<li class="breadcrumb-item"><a href="#">AdminKit</a></li>
-								<li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Analytics</li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xl-6 col-xxl-5 d-flex">
-						<div class="w-100">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title mb-4">Sales</h5>
-											<h1 class="display-5 mt-1 mb-3">2.382</h1>
-											<div class="mb-1">
-												<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-												<span class="text-muted">Since last week</span>
-											</div>
-										</div>
-									</div>
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title mb-4">Visitors</h5>
-											<h1 class="display-5 mt-1 mb-3">14.212</h1>
-											<div class="mb-1">
-												<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
-												<span class="text-muted">Since last week</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title mb-4">Earnings</h5>
-											<h1 class="display-5 mt-1 mb-3">$21.300</h1>
-											<div class="mb-1">
-												<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
-												<span class="text-muted">Since last week</span>
-											</div>
-										</div>
-									</div>
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title mb-4">Orders</h5>
-											<h1 class="display-5 mt-1 mb-3">64</h1>
-											<div class="mb-1">
-												<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
-												<span class="text-muted">Since last week</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xl-6 col-xxl-7">
-						<div class="card flex-fill w-100">
-							<div class="card-header">
-
-								<h5 class="card-title mb-0">Recent Movement</h5>
-							</div>
-							<div class="card-body py-3">
-								<div class="chart chart-sm">
-									<canvas id="chartjs-dashboard-line"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<h1 class="h3 mb-3">Profile</h1>
 
 				<div class="row">
-					<div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
-						<div class="card flex-fill w-100">
+					<div class="col-md-4 col-xl-3">
+						<div class="card mb-3">
+							<div class="card-header">
+								<h5 class="card-title mb-0">상세 프로필</h5>
+							</div>
+							<div class="card-body text-center" id="profileImage">
+								<img src="${mgr}/img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+								<h5 class="card-title mb-0">Christina Mason</h5>
+								<div class="text-muted mb-2">Lead Developer</div>
+
+								<div>
+									<a class="btn btn-primary btn-sm" href="#">Follow</a>
+									<a class="btn btn-primary btn-sm" href="#"><span data-feather="message-square"></span> Message</a>
+								</div>
+							</div>
+							<hr class="my-0" />
+							<div class="card-body" id="subject">
+								<h5 class="h6 card-title">Skills</h5>
+								<a href="#" class="badge badge-primary mr-1 my-1">HTML</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">JavaScript</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">Sass</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">Angular</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">Vue</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">React</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">Redux</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">UI</a>
+								<a href="#" class="badge badge-primary mr-1 my-1">UX</a>
+							</div>
+							<hr class="my-0" />
+							<div class="card-body" id="about">
+								<h5 class="h6 card-title">About</h5>
+								<ul class="list-unstyled mb-0">
+									<li class="mb-1"><span data-feather="home" class="feather-sm mr-1"></span> Lives in <a href="#">San Francisco, SA</a></li>
+
+									<li class="mb-1"><span data-feather="briefcase" class="feather-sm mr-1"></span> Works at <a href="#">GitHub</a></li>
+									<li class="mb-1"><span data-feather="map-pin" class="feather-sm mr-1"></span> From <a href="#">Boston</a></li>
+								</ul>
+							</div>
+							<hr class="my-0" />
+							<div class="card-body">
+								<h5 class="h6 card-title">Elsewhere</h5>
+								<ul class="list-unstyled mb-0">
+									<li class="mb-1"><span class="fas fa-globe fa-fw mr-1"></span> <a href="#">staciehall.co</a></li>
+									<li class="mb-1"><span class="fab fa-twitter fa-fw mr-1"></span> <a href="#">Twitter</a></li>
+									<li class="mb-1"><span class="fab fa-facebook fa-fw mr-1"></span> <a href="#">Facebook</a></li>
+									<li class="mb-1"><span class="fab fa-instagram fa-fw mr-1"></span> <a href="#">Instagram</a></li>
+									<li class="mb-1"><span class="fab fa-linkedin fa-fw mr-1"></span> <a href="#">LinkedIn</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-8 col-xl-9">
+						<div class="card">
 							<div class="card-header">
 
-								<h5 class="card-title mb-0">Browser Usage</h5>
+								<h5 class="card-title mb-0">Activities</h5>
 							</div>
-							<div class="card-body d-flex">
-								<div class="align-self-center w-100">
-									<div class="py-3">
-										<div class="chart chart-xs">
-											<canvas id="chartjs-dashboard-pie"></canvas>
+							<div class="card-body h-100">
+
+								<div class="media">
+									<img src="${mgr}/img/avatars/avatar-5.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Vanessa Tucker">
+									<div class="media-body">
+										<small class="float-right text-navy">5m ago</small>
+										<strong>Vanessa Tucker</strong> started following <strong>Christina Mason</strong><br />
+										<small class="text-muted">Today 7:51 pm</small><br />
+
+									</div>
+								</div>
+
+								<hr />
+								<div class="media">
+									<img src="${mgr}/img/avatars/avatar.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Charles Hall">
+									<div class="media-body">
+										<small class="float-right text-navy">30m ago</small>
+										<strong>Charles Hall</strong> posted something on <strong>Christina Mason</strong>'s timeline<br />
+										<small class="text-muted">Today 7:21 pm</small>
+
+										<div class="border text-sm text-muted p-2 mt-1">
+											Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+											pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+										</div>
+										<a href="#" class="btn btn-sm btn-danger mt-1"><i class="feather-sm" data-feather="heart"></i> Like</a>
+									</div>
+								</div>
+
+								<hr />
+								<div class="media">
+									<img src="${mgr}/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
+									<div class="media-body">
+										<small class="float-right text-navy">1h ago</small>
+										<strong>Christina Mason</strong> posted a new blog<br />
+
+										<small class="text-muted">Today 6:35 pm</small>
+									</div>
+								</div>
+
+								<hr />
+								<div class="media">
+									<img src="${mgr}/img/avatars/avatar-2.jpg" width="36" height="36" class="rounded-circle mr-2" alt="William Harris">
+									<div class="media-body">
+										<small class="float-right text-navy">3h ago</small>
+										<strong>William Harris</strong> posted two photos on <strong>Christina Mason</strong>'s timeline<br />
+										<small class="text-muted">Today 5:12 pm</small>
+
+										<div class="row no-gutters mt-1">
+											<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+												<img src="<%=application.getContextPath()%>/assets/mgr/img/photos/unsplash-1.jpg" class="img-fluid pr-2" alt="Unsplash">
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+												<img src="${mgr}/img/photos/unsplash-2.jpg" class="img-fluid pr-2" alt="Unsplash">
+											</div>
+										</div>
+										<a href="#" class="btn btn-sm btn-danger mt-1"><i class="feather-sm" data-feather="heart"></i> Like</a>
+									</div>
+								</div>
+
+								<hr />
+								<div class="media">
+									<img src="${mgr}/img/avatars/avatar-2.jpg" width="36" height="36" class="rounded-circle mr-2" alt="William Harris">
+									<div class="media-body">
+										<small class="float-right text-navy">1d ago</small>
+										<strong>William Harris</strong> started following <strong>Christina Mason</strong><br />
+										<small class="text-muted">Yesterday 3:12 pm</small>
+
+										<div class="media mt-1">
+											<a class="pr-3" href="#">
+								                <img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
+											</a>
+											<div class="media-body">
+												<div class="border text-sm text-muted p-2 mt-1">
+													Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+												</div>
+											</div>
 										</div>
 									</div>
-
-									<table class="table mb-0">
-										<tbody>
-											<tr>
-												<td>Chrome</td>
-												<td class="text-right">4306</td>
-											</tr>
-											<tr>
-												<td>Firefox</td>
-												<td class="text-right">3801</td>
-											</tr>
-											<tr>
-												<td>IE</td>
-												<td class="text-right">1689</td>
-											</tr>
-										</tbody>
-									</table>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
-						<div class="card flex-fill w-100">
-							<div class="card-header">
 
-								<h5 class="card-title mb-0">Real-Time</h5>
-							</div>
-							<div class="card-body px-4">
-								<div id="world_map" style="height:350px;"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
-						<div class="card flex-fill">
-							<div class="card-header">
-
-								<h5 class="card-title mb-0">Calendar</h5>
-							</div>
-							<div class="card-body d-flex">
-								<div class="align-self-center w-100">
-									<div class="chart">
-										<div id="datetimepicker-dashboard"></div>
+								<hr />
+								<div class="media">
+									<img src="${mgr}/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
+									<div class="media-body">
+										<small class="float-right text-navy">1d ago</small>
+										<strong>Christina Mason</strong> posted a new blog<br />
+										<small class="text-muted">Yesterday 2:43 pm</small>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="col-12 col-lg-8 col-xxl-9 d-flex">
-						<div class="card flex-fill">
-							<div class="card-header">
-
-								<h5 class="card-title mb-0">Latest Projects</h5>
-							</div>
-							<table class="table table-hover my-0">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th class="d-none d-xl-table-cell">Start Date</th>
-										<th class="d-none d-xl-table-cell">End Date</th>
-										<th>Status</th>
-										<th class="d-none d-md-table-cell">Assignee</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Project Apollo</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-success">Done</span></td>
-										<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-									</tr>
-									<tr>
-										<td>Project Fireball</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-danger">Cancelled</span></td>
-										<td class="d-none d-md-table-cell">William Harris</td>
-									</tr>
-									<tr>
-										<td>Project Hades</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-success">Done</span></td>
-										<td class="d-none d-md-table-cell">Sharon Lessman</td>
-									</tr>
-									<tr>
-										<td>Project Nitro</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-warning">In progress</span></td>
-										<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-									</tr>
-									<tr>
-										<td>Project Phoenix</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-success">Done</span></td>
-										<td class="d-none d-md-table-cell">William Harris</td>
-									</tr>
-									<tr>
-										<td>Project X</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-success">Done</span></td>
-										<td class="d-none d-md-table-cell">Sharon Lessman</td>
-									</tr>
-									<tr>
-										<td>Project Romeo</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-success">Done</span></td>
-										<td class="d-none d-md-table-cell">Christina Mason</td>
-									</tr>
-									<tr>
-										<td>Project Wombat</td>
-										<td class="d-none d-xl-table-cell">01/01/2020</td>
-										<td class="d-none d-xl-table-cell">31/06/2020</td>
-										<td><span class="badge badge-warning">In progress</span></td>
-										<td class="d-none d-md-table-cell">William Harris</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="col-12 col-lg-4 col-xxl-3 d-flex">
-						<div class="card flex-fill w-100">
-							<div class="card-header">
-
-								<h5 class="card-title mb-0">Monthly Sales</h5>
-							</div>
-							<div class="card-body d-flex w-100">
-								<div class="align-self-center chart chart-lg">
-									<canvas id="chartjs-dashboard-bar"></canvas>
+								<hr />
+								<div class="media">
+									<img src="${mgr}/img/avatars/avatar.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Charles Hall">
+									<div class="media-body">
+										<small class="float-right text-navy">1d ago</small>
+										<strong>Charles Hall</strong> started following <strong>Christina Mason</strong><br />
+										<small class="text-muted">Yesterdag 1:51 pm</small>
+									</div>
 								</div>
+
+								<hr />
+								<a href="#" class="btn btn-primary btn-block">Load more</a>
 							</div>
 						</div>
 					</div>
