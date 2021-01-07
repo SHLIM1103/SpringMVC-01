@@ -12,7 +12,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Student {
-    private String stuNum, userid, password, name, ssn, regDate, profileImage;
+    private String stuNum, userid, password, name, birthday, gender, 
+    			regDate, profileImage, subject;
 }
 /*
 create table students(

@@ -29,7 +29,6 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
 	<!-- UTF-8 관련 파라미터 설정 -->
 	<filter>
 	    <filter-name>encodingFilterUTF8</filter-name>

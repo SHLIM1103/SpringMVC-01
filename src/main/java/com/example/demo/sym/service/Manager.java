@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Manager {
-    private String email, password;
+    private String mgrNum, email, password, name, profileImage;
 }
 /*
 create table managers(

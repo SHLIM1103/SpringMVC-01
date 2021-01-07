@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import static com.example.demo.cmm.utl.Util.*;
 
+import com.example.demo.cmm.enm.Messenger;
 import com.example.demo.uss.service.Student;
+import com.example.demo.uss.service.StudentMapper;
 import com.example.demo.uss.service.StudentService;
 
 import org.slf4j.Logger;
@@ -22,51 +25,71 @@ import org.slf4j.LoggerFactory;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
     @Autowired StudentService studentService;
-
+    @Autowired StudentMapper studentMapper;
+    
     @PostMapping("")
-    public Map<?,?> register(@RequestBody Student student){
-        logger.info("학생등록 정보: " + student.toString());
-        var map = new HashMap<>();
-        map.put("message", studentService.register(student) == 1 ? "SUCCESS" : "FAILURE");
-        return map;
+    public Messenger register(@RequestBody Student s){
+        return studentMapper.insert(s)==1?Messenger.SUCCESS:Messenger.FAILURE;
     }
     
     @PostMapping("/login")
-    public Map<?,?> login(@RequestBody Student student){
-        logger.info("로그인 정보: " + student.toString());
+    public Map<?,?> login(@RequestBody Student s){
         var map = new HashMap<>();
-        map.put("message", (studentService.login(student)!=null) ? "SUCCESS" : "FAILURE");
-        map.put("sessionUser", studentService.login(student));
-        return map;
-    }
-
-    @GetMapping("/{userid}")
-    public Student profile(@PathVariable String userid){
-        logger.info("프로필 정보: " + userid);
-        return studentService.detail(userid);
-    }
-
-    @GetMapping("")
-    public List<?> list(){
-        return studentService.list();
-    }
-
-    @PutMapping("")
-    public Map<?,?> update(@RequestBody Student student){
-        logger.info("수정하려는 학생: " + student.toString());
-        var map = new HashMap<>();
-        map.put("message", (studentService.update(student) == 1) ? "SUCCESS" : "FAILURE");
+        Student result = studentMapper.login(s);
+        map.put("message", result!=null?"SUCCESS":"FAILURE");
+        map.put("sessionUser", result);
         return map;
     }
     
-    @DeleteMapping("")
-    public Map<?,?> delete(@RequestBody Student student){
-        logger.info("삭제하려는 학생: " + student.toString());
-        var map = new HashMap<>();
-        map.put("message", (studentService.delete(student) == 1) ? "SUCCESS" : "FAILURE");
-        return map;
+    @GetMapping("/{userid}")
+    public Student profile(@PathVariable String userid){
+        return studentMapper.selectById(userid);
     }
+    
+    /*
+    @GetMapping("")
+    public List<?> list(){
+        return studentMapper.selectAll();
+    }
+    */
+    
+    @PutMapping("")
+    public Messenger update(@RequestBody Student s){
+        return studentMapper.update(s)==1?Messenger.SUCCESS:Messenger.FAILURE;
+    }
+    
+    @DeleteMapping("")
+    public Messenger delete(@RequestBody Student s){
+    	logger.info("Students Deleted Execute ...");
+        return studentMapper.delete(s) ==1?Messenger.SUCCESS:Messenger.FAILURE;
+    }
+    
+    @GetMapping("/truncate")
+    public Messenger truncate() {
+    	logger.info("Students Truncated Execute ...");
+    	return studentService.truncate()==1?Messenger.SUCCESS:Messenger.FAILURE;
+    }
+    
+    @GetMapping("/insert-many/{count}")
+    public String insertMany(@PathVariable String count) {
+    	logger.info(String.format("Insert %s Students ...",count));
+    	return string.apply(studentService.insertMany(Integer.parseInt(count)));
+    }
+    
+    @GetMapping("/count")
+    public String count() {
+    	logger.info(String.format("Count Students ..."));
+    	return string.apply(studentService.count());
+    }
+    
+    @GetMapping("/find-by-gender/{gender}")
+    public String findByGender(@PathVariable String gender) {
+    	logger.info(String.format("Find By $s from Students...", gender));
+    	return string.apply(studentService.selectByGender(gender));
+    }
+    
 }
-
