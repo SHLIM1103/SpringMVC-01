@@ -50,7 +50,7 @@
 <script>
 $.getJSON(`${ctx}/students/count`, function(d){ mgr.count(d) })
 
-$.getJSON(`${ctx}/students`, function(d){ mgr.list(d) })
+$.getJSON(`${ctx}/students`, function(d){ mgr.list(d)})
 
 $(`#mgr-truncate-stu`).click(function(e){
 	e.preventDefault()
