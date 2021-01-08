@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StudentMapper {
-
 	public int insert(Student s);
 	public Student login(Student s);
 	public Student selectById(String userid);
@@ -16,5 +15,4 @@ public interface StudentMapper {
 	public int delete(Student s);
 	public void truncate(HashMap<String, String> map);
 	public int count(HashMap<String, String> map);
-    
 }

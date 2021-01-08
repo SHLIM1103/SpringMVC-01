@@ -1,7 +1,7 @@
 package com.example.demo.cmm.enm;
 
 public enum Sql {
-	TRUNCATE_STUDENTS, COUNT_STUDENTS, SELECT_ALL_STUDENTS;
+	TRUNCATE_STUDENTS, COUNT, SELECT_ALL_STUDENTS;
 	@Override
 	public String toString() {
 		String query = "";
@@ -9,8 +9,8 @@ public enum Sql {
 		case TRUNCATE_STUDENTS:
 			query = "truncate table students"; 
 			break;
-		case COUNT_STUDENTS:
-			query = "select count(*) count from students"; 
+		case COUNT:
+			query = "select count(*) count from "; 
 			break;
 		case SELECT_ALL_STUDENTS:
 			query = "select * count from students"; 

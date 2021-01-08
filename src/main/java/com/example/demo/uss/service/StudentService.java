@@ -37,7 +37,7 @@ public class StudentService{
     
     public int count() {
     	var map = new HashMap<String,String>();
-    	map.put("COUNT_STUDENTS", Sql.COUNT_STUDENTS.toString());
+    	map.put("COUNT", Sql.COUNT.toString() + "students");
     	return studentMapper.count(map);
     }
     
