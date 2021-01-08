@@ -10,6 +10,10 @@
     	${TRUNCATE_STUDENTS}
     </delete>
     <select id="count" resultType="int">
-    	select count (*) as count from students 
+    	${COUNT_STUDENTS}
+    </select>
+    <select id="selectAll" resultType="com.example.demo.uss.service.Student">
+    	select stu_num stuNum, userid, password, name, birthday, gender, 
+    			reg_date regDate, profile_image profileImage, subject from students
     </select>
 </mapper>

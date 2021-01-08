@@ -50,12 +50,13 @@ public class StudentController {
         return studentMapper.selectById(userid);
     }
     
-    /*
+    
     @GetMapping("")
     public List<?> list(){
-        return studentMapper.selectAll();
+    	logger.info("Students List excute...");
+        return studentService.selectAll();
     }
-    */
+    
     
     @PutMapping("")
     public Messenger update(@RequestBody Student s){
