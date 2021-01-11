@@ -126,15 +126,15 @@ public class DummyGenerator {
 	}
 	
 	public Student makeStudent() {
-		return new Student("", 
-							makeUserId(), 
-							"1", 
-							makeName(), 
-							makeBirthday(), 
-							makeGender(),
-							makeRegdate(),
-							Path.DEFAULT_PROFILE.toString(),
-							makeSubject());
+		return new Student(0,
+						   makeUserId(), 
+						   "1", 
+						   makeName(), 
+						   makeBirthday(), 
+						   makeGender(),
+						   makeRegdate(),
+						   Path.DEFAULT_PROFILE.toString(),
+						   makeSubject());
 	}
 	
 	public Manager makeManager() {

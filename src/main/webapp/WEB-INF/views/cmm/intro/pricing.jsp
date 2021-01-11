@@ -6,7 +6,7 @@
 <div id="pricing" class="container-fluid">
   <div class="text-center">
     <h2>사용자 등록 / 접속</h2>
-    <h4>사용자인증 후 접속 가능합니다</h4>
+    <h4>사용자 인증 후 접속 가능합니다</h4>
   </div>
   <div class="row slideanim">
     <div class="col-sm-4 col-xs-12">

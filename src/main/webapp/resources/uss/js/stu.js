@@ -1,12 +1,19 @@
 'use strict'
 var stu = stu || {}
+stu.insertMany = x => {
+	$.getJSON(`${x}/students/insert-many/${$('#stu-data-count').val()}`, 
+			d => { location.reload();})}
+
+stu.truncate = x => {
+	$.getJSON(`${x}/students/truncate`, d => {
+		location.reload();})}
+
 stu.count = x => {
 	$.getJSON(`${x}/students/count`, d => {
-		$(`#stu-count`).text(d)})
-}
+		$(`#stu-count`).text(d)})}
 
 stu.list = x => {
-	$.getJSON(`${x}/students`, d => {
+	$.getJSON(`${x.ctx}/students/page/${x.pageSize}/${x.pageNum}`, d => { 
 		$(`<h3/>`)
 		.attr({id: `title`})
 		.text(`학생목록`)
@@ -16,51 +23,83 @@ stu.list = x => {
 		.css({width: `100%`})
 		.appendTo(`#title`) 
 		$(`<tr/>`).attr({id: `tr_1`}).appendTo(`#tab`)
-		const arr = [`No`,`아이디`,`이름`,`생년월일`,`성별`,`등록일`,`전공과목`]
-		$.each(arr, (i, j) => {
+		$.each(
+			[`No`,`아이디`,`이름`,`생년월일`,`성별`,`등록일`,`전공과목`],
+			(i, j) => {
 			$(`<th>${j}</th>`).css({backgroundColor: `green`})
 			.appendTo(`#tr_1`)
 		})
 		
-		$.each(d, (i, j) => {
-			$(`<tr><td>${j.stuNum}</td>
-		   	    		<td>${j.userid}</td>
-		   	    		<td>${j.name}</td>
-						<td>${j.birthday}</td>
-						<td>${j.gender}</td>
-						<td>${j.regDate}</td>
-						<td>${j.subject}</td></tr>`)
+		$.each(d.list, 
+			(i, j) => {
+				$(`<tr><td>${j.stuNum}</td>
+			   	       <td>${j.userid}</td>
+			   	       <td>${j.name}</td>
+					   <td>${j.birthday}</td>
+					   <td>${j.gender}</td>
+					   <td>${j.regDate}</td>
+					   <td>${j.subject}</td></tr>`)
 						.css({padding: `15px`, textAlign: `left`, fontSize: `medium`})
 						.appendTo(`#tab`)
-		})
+			})
 		
 		$(`<div/>`)
 		.attr({id: `stu_page`})
 		.addClass(`pagination`)
 		.appendTo(`#mgr-data-mgt-stu`)
-		const arr2 = [`<<`, `1`, `2`, `3`, `4`, `5`, `6`, `>>`]
-		$.each(arr2, (i, j) => {
+		const page = d.page
+		
+		/* Function* range(start, end) {
+			for(let i = start ; i <= end ; i++) {
+				yield i ;
+			}
+		   }
+		아래는 for가 배제된 재귀함수 형태  */
+		function* range(start, end) {
+			yield start;
+			if(start === end) return;
+			yield* range(start + 1, end);
+		}
+		
+		if(page.existPrev){
 			$(`<a/>`)
 			.attr({href: `#`})
-			.text(`${j}`)
+			.text(`<<`)
+			.css({backgroundColor: `gray`})
 			.appendTo(`#stu_page`)
 			.click(e => {
 				e.preventDefault()
-				alert(j)
+				$(`#mgr-data-mgt-stu`).empty()
+				stu.list({ctx: x.ctx, pageSize: `10`, pageNum: page.prevBlock})
 			})
+		}
+		
+		$.each([...range(page.startPage, page.endPage)],
+				(i, j) => {
+					$(`<a/>`)
+					.attr({href: `#`})
+					.css({backgroundColor: (j != page.pageNum) ? `gray` : `green`})
+					.text(`${j}`)
+					.appendTo(`#stu_page`)
+					.click(e => {
+						e.preventDefault()
+						$(`#mgr-data-mgt-stu`).empty()
+						stu.list({ctx: x.ctx, pageSize: `10`, pageNum: j})
+					})
 		})
-	})
-}
-
-stu.truncate = x => {
-	$.getJSON(`${x}/students/truncate`, d => {
-		location.reload();
-	})
-}
-
-stu.insertMany = x => {
-	$.getJSON(`${x}/students/insert-many/${$('#stu-data-count').val()}`, 
-			d => { location.reload();
+		
+		if(page.existNext){
+			$(`<a/>`)
+			.attr({href: `#`})
+			.css({backgroundColor: `gray`})
+			.text(`>>`)
+			.appendTo(`#stu_page`)
+			.click(e => {
+				e.preventDefault()
+				$(`#mgr-data-mgt-stu`).empty()
+				stu.list({ctx: x.ctx, pageSize: `10`, pageNum: page.nextBlock})
+			})
+		}
 	})
 }
 

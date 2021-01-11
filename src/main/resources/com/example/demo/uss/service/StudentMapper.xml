@@ -1,19 +1,36 @@
 <!DOCTYPE mapper
-    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.uss.service.StudentMapper">
    <insert id="insert" parameterType="com.example.demo.uss.service.Student">
        insert into students(userid, password, name, birthday, reg_date, profile_image, subject, gender)
 		values (#{userid}, #{password}, #{name}, #{birthday}, #{regDate}, #{profileImage}, #{subject}, #{gender})
    </insert>
-    <delete id="truncate" parameterType="hashmap">
-    	${TRUNCATE_STUDENTS}
-    </delete>
-    <select id="count" resultType="int">
-    	${COUNT_STUDENTS}
+    <delete id="truncate" parameterType="hashmap">${TRUNCATE_STUDENTS}</delete>
+    <select id="count" resultType="int">${COUNT_STUDENTS}</select>
+    <select id="selectAll" resultType="com.example.demo.uss.service.Student"
+	parameterType="com.example.demo.cmm.utl.Pagination">
+    	select a.stu_num stuNum, 
+    		   a.userid, 
+    		   a.password, 
+    		   a.name, 
+    		   a.birthday, 
+    		   a.reg_date regDate, 
+    		   a.profile_image profileImage, 
+    		   a.subject,
+    		   a.gender
+    	from (select * from ${tname} order by stu_num desc) a
+			 limit ${startRow}, ${pageSize}
     </select>
-    <select id="selectAll" resultType="com.example.demo.uss.service.Student">
-    	select stu_num stuNum, userid, password, name, birthday, gender, 
-    			reg_date regDate, profile_image profileImage, subject from students
+    <select id="list" resultType="com.example.demo.uss.service.Student">
+    	select stu_num stuNum, 
+    		   userid, 
+    		   password, 
+    		   name, 
+    		   birthday, 
+    		   reg_date regDate, 
+    		   profile_image profileImage, 
+    		   subject,
+    		   gender
+    	from students
     </select>
 </mapper>
