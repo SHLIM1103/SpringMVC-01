@@ -12,16 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Grade {
-    private String gradeNum, subject, score, grade, stuNum;
-}
+    private int gradeNum, stuNum, score;
+    private String subject, grade, examDate, passExam;
 
-/*
-	create table grades(
-	grade_num int primary key,
-	subject varchar2(20),
-	score varchar2(20),
-	grade varchar2(20),
-	stu_num int,
-	constraint grades_fk foreign key(stu_num) references students(stu_num)
-	)
-*/
+    public Grade(String subject, String examDate, int score) {
+    	this.subject = subject;
+    	this.examDate = examDate;
+    	this.score = score;
+    }
+}

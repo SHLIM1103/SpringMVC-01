@@ -18,7 +18,6 @@ import com.example.demo.cmm.utl.Pagination;
 public class StudentService{
 	@Autowired DummyGenerator dummy;
     @Autowired StudentMapper studentMapper;
-    @Autowired Pagination page;
 
     @Transactional
     public int insertMany(int count) {
@@ -31,10 +30,11 @@ public class StudentService{
     @Transactional
     public int truncate() {
     	var map = new HashMap<String,String>();
-    	map.put("TRUNCATE_STUDENTS", Sql.TRUNCATE_STUDENTS.toString());
+    	map.put("TRUNCATE", Sql.TRUNCATE.toString());
     	studentMapper.truncate(map);
     	return count() != 0 ? 0 : 1;
     }
+    
     
     public int count() {
     	var map = new HashMap<String,String>();

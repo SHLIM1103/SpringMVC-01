@@ -25,20 +25,20 @@ public class TeacherController {
 	@Autowired TeacherService teacherService;
 	@Autowired TeacherMapper teacherMapper;
 	
-	@PostMapping("")
-	public Messenger register(Teacher teacher){
-		logger.info("등록하려는 교강사 정보: " + teacher.toString());
-		return (teacherService.register(teacher) == 1) ? Messenger.SUCCESS : Messenger.FAILURE;
-	}
-	
-	@PostMapping("/access")
-	public Teacher access(@RequestBody Teacher teacher) {
-		return teacherMapper.access(teacher);
-	}
-	
-	@GetMapping("")
-	public List<Teacher> list(){
-		return teacherService.list();
-	}
+//	@PostMapping("")
+//	public Messenger register(Teacher teacher){
+//		logger.info("등록하려는 교강사 정보: " + teacher.toString());
+//		return (teacherService.register(teacher) == 1) ? Messenger.SUCCESS : Messenger.FAILURE;
+//	}
+//	
+//	@PostMapping("/access")
+//	public Teacher access(@RequestBody Teacher teacher) {
+//		return teacherMapper.access(teacher);
+//	}
+//	
+//	@GetMapping("")
+//	public List<Teacher> list(){
+//		return teacherService.list();
+//	}
 
 }

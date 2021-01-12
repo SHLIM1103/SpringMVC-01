@@ -8,16 +8,21 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.springframework.stereotype.Service;
 
 import com.example.demo.cmm.enm.Path;
+import com.example.demo.sts.service.Grade;
 import com.example.demo.sym.service.Manager;
 import com.example.demo.sym.service.Teacher;
 import com.example.demo.uss.service.Student;
 
 @Service("dummy")
 public class DummyGenerator {
+	/********************************
+	 * Student Dummy Data Generator *
+	 ********************************/
 	// 1970 ~ 2000년 사이의 랜덤한 연도수 뽑기 
 	public String makeYear(int t, int u) {
 		BiFunction<Integer, Integer, Integer> f = (a, b) -> (int)(Math.random() * (b - a)) + a;
@@ -55,6 +60,10 @@ public class DummyGenerator {
 			default: date = random.apply(1, 32); break;
 			}
 			return year+"-"+month+"-"+date;
+	}
+	
+	public String makeExamDate() {
+		return "2020-11-30";
 	}
 	
 	// 랜덤으로 성별 생성하기 / "F" - female "M" - male
@@ -113,11 +122,6 @@ public class DummyGenerator {
 				.get(0);
 	    return fname.get(0)+a[0]+a[1] ;
 	}
-	public String makeSubject() {
-		List<String> ls = Arrays.asList("Java", "Spring", "jQuery", "eGovFramework", "Python");
-		Collections.shuffle(ls);
-		return ls.get(0);
-	}
 	
 	public String makeEmail() {
 		List<String> ls = Arrays.asList("@gmail.com", "@naver.com", "@nate.com", "@hanmail.net");
@@ -137,20 +141,45 @@ public class DummyGenerator {
 						   makeSubject());
 	}
 	
-	public Manager makeManager() {
-		return new Manager("", 
-							makeEmail(), 
-							"1", 
-							makeName(), 
-							Path.DEFAULT_PROFILE.toString());
+	/******************************
+	 * Grade Dummy Data Generator *
+	 ******************************/
+	public String makeSubject() {
+		List<String> ls = Arrays.asList("Java", "Spring", "jQuery", "eGovFramework", "Python");
+		Collections.shuffle(ls);
+		return ls.get(0);
 	}
 	
+	public List<Integer> makeScore() {
+		return Stream.generate(Math::random)
+					.limit(1)
+					.map(i -> (int)(i * 100))
+					.collect(Collectors.toList());
+	}
+	
+	public Grade makeGrade() {
+		return new Grade(makeSubject(), makeExamDate(), makeScore().get(0));
+	}
+	
+	/********************************
+	 * Teacher Dummy Data Generator *
+	 ********************************/
 	public Teacher makeTeacher() {
 		return new Teacher("", 
-							makeName(), 
-							"1", 
-							makeSubject(), 
-							Path.DEFAULT_PROFILE.toString());
+						   makeName(), 
+						   "1", 
+						   "", 
+						   Path.DEFAULT_PROFILE.toString());
 	}
 	
+	/********************************
+	 * Manager Dummy Data Generator *
+	 ********************************/
+	public Manager makeManager() {
+		return new Manager("", 
+						   makeEmail(), 
+						   "1", 
+						   makeName(), 
+						   Path.DEFAULT_PROFILE.toString());
+	}
 }

@@ -18,6 +18,10 @@ import com.example.demo.cmm.enm.Messenger;
 import com.example.demo.cmm.enm.Table;
 import com.example.demo.cmm.service.CommonMapper;
 import com.example.demo.cmm.utl.Pagination;
+import com.example.demo.sts.service.GradeService;
+import com.example.demo.sts.service.SubjectService;
+import com.example.demo.sym.service.TeacherMapper;
+import com.example.demo.sym.service.TeacherService;
 import com.example.demo.uss.service.Student;
 import com.example.demo.uss.service.StudentMapper;
 import com.example.demo.uss.service.StudentService;
@@ -29,8 +33,12 @@ import org.slf4j.LoggerFactory;
 @RequestMapping("/students")
 public class StudentController {
     @Autowired StudentService studentService;
+    @Autowired TeacherService teacherService;
+    @Autowired GradeService gradeService;
+    @Autowired SubjectService subjectService;
     @Autowired Pagination page;
     @Autowired StudentMapper studentMapper;
+    @Autowired TeacherMapper teacherMapper;
     @Autowired CommonMapper commonMapper;
     
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -101,6 +109,9 @@ public class StudentController {
     @GetMapping("/insert-many/{count}")
     public String insertMany(@PathVariable String count) {
     	logger.info(String.format("Insert %s Students ...",count));
+    	gradeService.insertMany(Integer.parseInt(count));
+    	subjectService.insertMany(5);
+    	teacherService.insertMany(5);
     	return string.apply(studentService.insertMany(Integer.parseInt(count)));
     }
     
