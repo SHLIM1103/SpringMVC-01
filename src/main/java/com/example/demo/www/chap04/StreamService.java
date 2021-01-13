@@ -1,25 +1,31 @@
 package com.example.demo.www.chap04;
 
+
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
+
+import com.example.demo.cmm.utl.Util;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data @AllArgsConstructor 
-class Dish {private String name; boolean vegetarian; int calories; Type type;}
-enum Type { MEAT, FISH, OTHER }
 
-public class StreamService {
+
+public class StreamService{
 	
-	public List<String> bookTitle() {
+	
+	public List<String> bookTitle(){
 		return Arrays.asList("Java8", "Lambdas", "In", "Action");
 	}
-	
-	public List<Dish> menu() {
+	public List<Dish> menu(){
 		return Arrays.asList(
 			      new Dish("pork", false, 800, Type.MEAT),
 			      new Dish("beef", false, 700, Type.MEAT),
@@ -29,16 +35,19 @@ public class StreamService {
 			      new Dish("season fruit", true, 120, Type.OTHER),
 			      new Dish("pizza", true, 550, Type.OTHER),
 			      new Dish("prawns", false, 400, Type.FISH),
-			      new Dish("salmon", false, 450, Type.FISH)
-		    	);
+			      new Dish("salmon", false, 450, Type.FISH));
 	}
-
 	public List<Dish> filterByWeight(int weight) {
 	    return menu().stream()
-	            .filter(dish -> {return dish.getCalories() > weight;})
-	            .map(dish -> {return dish;})
-	            .collect(toList());
-      }
+	        .filter(dish -> {
+	          return dish.getCalories() > weight;
+	        })
+	        .map(dish -> {
+	          return dish;
+	        })
+	        .collect(toList());
+	    
+	  }
 
 	  public List<String> getLowCaloricDishesNames(List<Dish> dishes) {
 	    return dishes.stream()
@@ -47,5 +56,9 @@ public class StreamService {
 	        .map(Dish::getName)
 	        .collect(toList());
 	  }
-	  
+
 }
+@Data @AllArgsConstructor class Dish{ 
+	private String name; boolean vegetarian; int calories; Type type;
+}
+enum Type {  MEAT, FISH, OTHER }

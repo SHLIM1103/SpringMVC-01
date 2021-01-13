@@ -200,8 +200,8 @@
 <jsp:include page="./cmm/intro/jumbo.jsp"/>
 <jsp:include page="./cmm/intro/pricing.jsp"/>
 <jsp:include page="./cmm/intro/about.jsp"/>
-<jsp:include page="./cmm/intro/service.jsp"/>
 <jsp:include page="./cmm/intro/portpolio.jsp"/>
+<jsp:include page="./cmm/intro/service.jsp"/>
 <jsp:include page="./cmm/intro/contact.jsp"/>
 <jsp:include page="./cmm/intro/footer.jsp"/>
 

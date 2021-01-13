@@ -4,13 +4,12 @@ import java.util.Objects;
 
 import org.springframework.context.annotation.Lazy;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data @Lazy @AllArgsConstructor 
-class Trader {
+@Data @Lazy @AllArgsConstructor class Trader {
 	private String name, city;
-
 	@Override
 	  public int hashCode() {
 	    int hash = 17;
@@ -39,10 +38,11 @@ class Trader {
 	  }
 
 }
-@Data @Lazy @AllArgsConstructor 
-class Transaction {
+@Data @Lazy @AllArgsConstructor class Transaction {
+
 	  private Trader trader;
 	  private int year, value;
+
 
 	  @Override
 	  public int hashCode() {
@@ -61,7 +61,6 @@ class Transaction {
 	    if (!(other instanceof Transaction)) {
 	      return false;
 	    }
-	    
 	    Transaction o = (Transaction) other;
 	    boolean eq = Objects.equals(trader,  o.getTrader());
 	    eq = eq && year == o.getYear();
@@ -75,8 +74,7 @@ class Transaction {
 	    return String.format("{%s, year: %d, value: %d}", trader, year, value);
 	  }
 
-}
-
+	}
 public class MatchingService {
 	
 }

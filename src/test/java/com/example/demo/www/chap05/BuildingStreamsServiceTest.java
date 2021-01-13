@@ -1,13 +1,13 @@
 package com.example.demo.www.chap05;
 
-import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.*;
-
+import static java.util.Arrays.asList;
 import org.junit.jupiter.api.Test;
 
 class BuildingStreamsServiceTest {
-	BuildingStreamsService bs = new BuildingStreamsService(); 
-			
+	
+	BuildingStreamsService bs = new BuildingStreamsService();
+	
 	@Test
 	void testMyOf() {
 		assertTrue(asList("Java 8", "Lambdas", "In", "Action").equals(bs.myOf()));
@@ -24,13 +24,13 @@ class BuildingStreamsServiceTest {
 	}
 
 	@Test
-	void testMyFibonacci() {
-		assertTrue(asList().equals(bs.myFibonacci()));
+	void testMyFinonacci() {
+		assertTrue(asList().equals(bs.myFinonacci()));
 	}
 
 	@Test
-	void testMyFibonacci2() {
-		assertTrue(asList().equals(bs.myFibonacci2()));
+	void testMyFinonacci2() {
+		assertTrue(asList().equals(bs.myFinonacci2()));
 	}
 
 }

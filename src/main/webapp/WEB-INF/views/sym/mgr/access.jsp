@@ -74,7 +74,7 @@ span.psw {
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="uid" value="a" required>
+    <input type="text" placeholder="Enter Username" id="uid" value="a@test.com" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" id="pwd" value="1" required>
@@ -90,7 +90,6 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </div>
-<script src="${mgr}/js/mgr.js"></script>
 <script>
-	$(`#mgr-access-btn`).click(function() { mgr.access(`${ctx}`) })
+$(`#mgr-access-btn`).click(function() {mgr.access(`${ctx}`)})
 </script>

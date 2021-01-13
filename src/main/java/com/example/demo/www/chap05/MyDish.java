@@ -3,12 +3,6 @@ package com.example.demo.www.chap05;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.context.annotation.Lazy;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data @AllArgsConstructor @Lazy
 public class MyDish {
 
   private final String name;
@@ -16,7 +10,34 @@ public class MyDish {
   private final int calories;
   private final Type type;
 
-  public enum Type {MEAT, FISH, OTHER}
+  public MyDish(String name, boolean vegetarian, int calories, Type type) {
+    this.name = name;
+    this.vegetarian = vegetarian;
+    this.calories = calories;
+    this.type = type;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public boolean isVegetarian() {
+    return vegetarian;
+  }
+
+  public int getCalories() {
+    return calories;
+  }
+
+  public Type getType() {
+    return type;
+  }
+
+  public enum Type {
+    MEAT,
+    FISH,
+    OTHER
+  }
 
   @Override
   public String toString() {

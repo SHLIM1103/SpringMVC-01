@@ -36,10 +36,10 @@ public class Main {
   public static void main(String[] args) {
     Main main = new Main();
     main.plain();
-    main.methodChaining();
-    main.nestedFunction();
-    main.lambda();
-    main.mixed();
+    //main.methodChaining();
+    //main.nestedFunction();
+    //main.lambda();
+    //main.mixed();
   }
 
   public void plain() {
@@ -73,7 +73,7 @@ public class Main {
     System.out.println("Plain:");
     System.out.println(order);
   }
-
+/*
   public void methodChaining() {
     Order order = forCustomer("BigBank")
         .buy(80).stock("IBM").on("NYSE").at(125.00)
@@ -83,7 +83,8 @@ public class Main {
     System.out.println("Method chaining:");
     System.out.println(order);
   }
-
+*/
+/*
   public void nestedFunction() {
     Order order = order("BigBank",
         buy(80,
@@ -97,7 +98,7 @@ public class Main {
     System.out.println("Nested function:");
     System.out.println(order);
   }
-
+*/
   public void lambda() {
     Order order = LambdaOrderBuilder.order( o -> {
       o.forCustomer( "BigBank" );
@@ -122,7 +123,7 @@ public class Main {
     System.out.println("Lambda:");
     System.out.println(order);
   }
-
+  /*
   public void mixed() {
     Order order =
         forCustomer("BigBank",
@@ -137,6 +138,6 @@ public class Main {
 
     System.out.println("Mixed:");
     System.out.println(order);
-  }
+  }*/
 
 }

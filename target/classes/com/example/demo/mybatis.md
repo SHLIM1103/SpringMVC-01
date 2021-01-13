@@ -1,16 +1,17 @@
-// 동적 SQL을 처리하는 방법
-// OGNL 기반의 표현식
-
+동적 SQL을 처리하는 방법
+OGNL 기반의 표현식
 if
 choose (when, otherwise)
 trim (where, set)
 foreach
+
 if
 <select id="find" 
 	parameterType="com.gms.web.Command"
 	resultType="com.gms.web.Domain"> 
+
 	SELECT * FROM BLOG 
-    WHERE state = 'ACTIVE' 
+    WHERE state = ‘ACTIVE’ 
   <if test="title != null">
     AND title like '%${name}%'
   </if>
@@ -18,8 +19,10 @@ if
     AND author_name like #{member.name}
   </if>
 </select>
+
 <select id="findActiveBlogLike" resultType="Blog">
-  SELECT * FROM BLOG WHERE state = 'ACTIVE'
+     
+  SELECT * FROM BLOG WHERE state = ‘ACTIVE’
   <choose>
     <when test="title != null">
       AND title like #{title}
@@ -32,6 +35,7 @@ if
     </otherwise>
   </choose>
 </select>
+
 <select id="selectPostIn" resultType="domain.blog.Post">
   SELECT *
   FROM POST P

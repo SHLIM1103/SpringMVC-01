@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.example.demo.sts.service.Grade;
+
 @Repository
 public interface TeacherMapper {
-	public int insertMany(List<Teacher> list);
-	public List<Teacher> selectAll();
-	public Teacher selectByName(String name);
-	public int update(Teacher teacher);
-	public int delete(Teacher teacher);
+	public int insertMany(List<Teacher>list);
 	public Teacher access(Teacher teacher);
+	public int insert(Teacher teacher);
+	
 }
