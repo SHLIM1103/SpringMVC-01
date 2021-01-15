@@ -6,6 +6,13 @@
 		insert into managers(email, password, name, profile_image) 
 		values (#{email}, #{password}, #{name}, #{profileImage})
 	</insert>
+	<select id="access"
+		resultType="com.example.demo.sym.service.Manager"
+	 parameterType="com.example.demo.sym.service.Manager">
+		select email, password, name, profile_image profileImage
+		from managers
+		where email like #{email} and password like #{password}
+	</select>
 	  <insert id="insertMany" parameterType="list">
 		insert into managers
 		(email, password, name, profile_image) 
@@ -14,11 +21,4 @@
 	        (#{i.email}, #{i.password}, #{i.name}, #{i.profileImage})
 	  	</foreach>
 	</insert>
-	<select id="access"
-		resultType="com.example.demo.sym.service.Manager"
-	 parameterType="com.example.demo.sym.service.Manager">
-		select email, password, name, profile_image profileImage
-		from managers
-		where email like #{email} and password like #{password}
-	</select>
 </mapper>

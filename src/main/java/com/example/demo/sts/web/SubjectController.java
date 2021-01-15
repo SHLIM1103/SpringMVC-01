@@ -1,9 +1,14 @@
 package com.example.demo.sts.web;
 import static com.example.demo.cmm.utl.Util.*;
 import static java.util.stream.Collectors.*;
+
+import java.util.Arrays;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import com.example.demo.cmm.enm.Messenger;
 import com.example.demo.cmm.enm.Sql;
@@ -15,6 +20,8 @@ import com.example.demo.cmm.utl.Util;
 import com.example.demo.sts.service.Grade;
 import com.example.demo.sts.service.GradeMapper;
 import com.example.demo.sts.service.GradeService;
+import com.example.demo.sts.service.GradeVo;
+import com.example.demo.sts.service.Subject;
 import com.example.demo.sts.service.SubjectMapper;
 import com.example.demo.sts.service.SubjectService;
 import com.example.demo.sym.service.ManagerService;
@@ -36,6 +43,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.List;
+import static com.example.demo.cmm.utl.Util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,15 +54,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/grades")
+@RequestMapping("/subjects")
 @RestController
-public class GradeController {
-	
+public class SubjectController {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired StudentService studentService;
     @Autowired GradeService gradeService;
     @Autowired StudentMapper studentMapper;
     @Autowired GradeMapper gradeMapper;
+    @Autowired TeacherMapper teacherMapper;
+    @Autowired SubjectMapper subjectMapper;
     @Autowired SubjectService subjectService;
     @Autowired TeacherService teacherService;
     @Autowired ManagerService managerService;
@@ -63,18 +72,47 @@ public class GradeController {
     @Autowired Box<String> bx;
     
     @PostMapping("")
-    public Messenger register(@RequestBody Grade g){
-        return gradeMapper.insert(g)==1?Messenger.SUCCESS:Messenger.FAILURE;
+    public Messenger register(@RequestBody Subject s){
+    	
+    	// Get the List 
+        List<String> g 
+            = Arrays.asList("geeks", "for", "geeks"); 
+  
+        // Collect the list as map 
+        // by groupingBy() method 
+       subjectService.groupBySubject(bx);
+        return subjectMapper.insert(s)==1?Messenger.SUCCESS:Messenger.FAILURE;
     }
    
-    @GetMapping("/register")
-    public Messenger registerMany(){
-    	logger.info("Grade List Register ...");
-    	gradeService.insertMany();
-    	bx.put("TOTAL_COUNT", Sql.TOTAL_COUNT.toString() + Table.GRADES);	
-        return commonMapper.totalCount(bx)!=0?Messenger.SUCCESS:Messenger.FAILURE;
+    @GetMapping("/groupBy/{examDate}/{subNum}")
+    public Map<?,?> totalScoreGroupBySubject(
+    		@PathVariable String examDate,
+    		@PathVariable String subNum){
+    	bx.put("examDate", examDate);
+    	bx.put("subNum", subNum);
+    	subjectService.groupBySubject(bx);
+    	return null;
+    }
+    @GetMapping("/groupByGrade/{examDate}/{subNum}")
+    public Map<?,?> groupByGrade(
+    		@PathVariable String examDate,
+    		@PathVariable String subNum){
+    	bx.put("examDate", examDate);
+    	bx.put("subNum", subNum);
+    	subjectService.groupBySubject(bx);
+    	return null;
     }
     
     
-	
+    
+
 }
+
+
+
+
+
+
+
+
+
